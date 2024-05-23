@@ -1,5 +1,12 @@
+import { BugButton } from "app/providers/ErrorBoundary";
+
 const MainPage = () => {
-  return <div>MainPage</div>;
+  return (
+    <div>
+      <BugButton />
+      MainPage
+    </div>
+  );
 };
 
 export default MainPage;
