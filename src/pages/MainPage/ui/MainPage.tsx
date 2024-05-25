@@ -1,10 +1,11 @@
 import { BugButton } from "app/providers/ErrorBoundary";
+import { Counter } from "entities/Counter";
 
 const MainPage = () => {
   return (
     <div>
       <BugButton />
-      MainPage
+      <Counter/>
     </div>
   );
 };
