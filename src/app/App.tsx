@@ -4,10 +4,17 @@ import { AppRouter } from "./providers/routes";
 import { Navbar } from "widgets/navbar";
 import { Sidebar } from "widgets/Sidebar";
 import { Modal } from "shared/ui/Modal/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { userActions } from "entities/User";
 
 export const App = () => {
   const { theme } = useTheme();
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+    dispatch(userActions.initAuthData())
+  }, [dispatch])
 
   const [isOpen, setIsOpen] = useState(false);
 
